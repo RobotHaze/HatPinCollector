@@ -13,6 +13,8 @@
 		B1B900DD1EAFE57F00ADD79E /* HatPinCollector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B1B900DB1EAFE57F00ADD79E /* HatPinCollector.xcdatamodeld */; };
 		B1B900DF1EAFE57F00ADD79E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1B900DE1EAFE57F00ADD79E /* Assets.xcassets */; };
 		B1B900E21EAFE57F00ADD79E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1B900E01EAFE57F00ADD79E /* LaunchScreen.storyboard */; };
+		B1B900EA1EAFEA8D00ADD79E /* panda valentine.png in Resources */ = {isa = PBXBuildFile; fileRef = B1B900E91EAFEA8D00ADD79E /* panda valentine.png */; };
+		B1B900EC1EAFEBD500ADD79E /* HatPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B900EB1EAFEBD500ADD79E /* HatPinViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B1B900DE1EAFE57F00ADD79E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1B900E11EAFE57F00ADD79E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1B900E31EAFE57F00ADD79E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1B900E91EAFEA8D00ADD79E /* panda valentine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "panda valentine.png"; sourceTree = "<group>"; };
+		B1B900EB1EAFEBD500ADD79E /* HatPinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HatPinViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,11 @@
 		B1B900D31EAFE57F00ADD79E /* HatPinCollector */ = {
 			isa = PBXGroup;
 			children = (
+				B1B900E91EAFEA8D00ADD79E /* panda valentine.png */,
 				B1B900D41EAFE57F00ADD79E /* AppDelegate.swift */,
 				B1B900D61EAFE57F00ADD79E /* ViewController.swift */,
 				B1B900D81EAFE57F00ADD79E /* Main.storyboard */,
+				B1B900EB1EAFEBD500ADD79E /* HatPinViewController.swift */,
 				B1B900DE1EAFE57F00ADD79E /* Assets.xcassets */,
 				B1B900E01EAFE57F00ADD79E /* LaunchScreen.storyboard */,
 				B1B900E31EAFE57F00ADD79E /* Info.plist */,
@@ -126,6 +132,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1B900EA1EAFEA8D00ADD79E /* panda valentine.png in Resources */,
 				B1B900E21EAFE57F00ADD79E /* LaunchScreen.storyboard in Resources */,
 				B1B900DF1EAFE57F00ADD79E /* Assets.xcassets in Resources */,
 				B1B900DA1EAFE57F00ADD79E /* Main.storyboard in Resources */,
@@ -139,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1B900EC1EAFEBD500ADD79E /* HatPinViewController.swift in Sources */,
 				B1B900D71EAFE57F00ADD79E /* ViewController.swift in Sources */,
 				B1B900DD1EAFE57F00ADD79E /* HatPinCollector.xcdatamodeld in Sources */,
 				B1B900D51EAFE57F00ADD79E /* AppDelegate.swift in Sources */,

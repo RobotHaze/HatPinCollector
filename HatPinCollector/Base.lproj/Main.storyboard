@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="860" y="130.88455772113943"/>
         </scene>
-        <!--View Controller-->
+        <!--Hat Pin View Controller-->
         <scene sceneID="iPW-1K-qI3">
             <objects>
-                <viewController id="2O6-th-ine" sceneMemberID="viewController">
+                <viewController id="2O6-th-ine" customClass="HatPinViewController" customModule="HatPinCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vir-Jj-TRY"/>
                         <viewControllerLayoutGuide type="bottom" id="MVl-ag-ulg"/>
@@ -47,14 +47,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7tK-EP-xmW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="panda valentine.png" translatesAutoresizingMaskIntoConstraints="NO" id="7tK-EP-xmW">
                                 <rect key="frame" x="107" y="84" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="BF8-mD-7Zc"/>
                                     <constraint firstAttribute="height" constant="200" id="cvu-0F-tmu"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sLZ-ba-Tnv">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of pin" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sLZ-ba-Tnv">
                                 <rect key="frame" x="107" y="318" width="200" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -63,6 +63,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10L-jZ-6uK">
                                 <rect key="frame" x="192" y="373" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="2O6-th-ine" eventType="touchUpInside" id="Afx-cl-ccD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -78,10 +81,22 @@
                     </view>
                     <navigationItem key="navigationItem" id="gpi-5x-WAX">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="YIY-5O-1rU"/>
-                            <barButtonItem title="Photos" id="eiN-hd-tQ5"/>
+                            <barButtonItem systemItem="camera" id="YIY-5O-1rU">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="2O6-th-ine" id="Gog-rt-7Ty"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="eiN-hd-tQ5">
+                                <connections>
+                                    <action selector="photosTapped:" destination="2O6-th-ine" id="tQ1-FD-XWz"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nameTextField" destination="sLZ-ba-Tnv" id="4yM-Q7-6NM"/>
+                        <outlet property="pinImageView" destination="7tK-EP-xmW" id="ISk-hW-jvN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJf-Hu-Qam" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,4 +121,7 @@
             <point key="canvasLocation" x="17" y="131"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="panda valentine.png" width="1604" height="1856"/>
+    </resources>
 </document>
