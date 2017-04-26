@@ -2,7 +2,7 @@
 //  HatPinViewController.swift
 //  HatPinCollector
 //
-//  Created by Hayley Woodard on 4/25/17.
+//  Created by Jordan Matthews on 4/25/17.
 //  Copyright © 2017 Jordan Matthews. All rights reserved.
 //
 
