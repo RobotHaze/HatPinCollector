@@ -47,6 +47,17 @@ class HatPinViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     
     @IBAction func addTapped(_ sender: Any) {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let pin = Pin(context: context)
+        pin.title = nameTextField.text
+        pin.image = UIImagePNGRepresentation(pinImageView.image!)! as NSData
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        navigationController!.popViewController(animated: true)
+        
     }
     
 
