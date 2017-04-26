@@ -11,15 +11,31 @@ import UIKit
 class HatPinViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
+    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var addUpdateButton: UIButton!
     @IBOutlet weak var pinImageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
     
     var imagePicker = UIImagePickerController()
+    
+    var pin : Pin? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         imagePicker.delegate = self
+        
+        if pin != nil {
+            
+            pinImageView.image = UIImage(data: pin!.image! as Data)
+            nameTextField.text = pin!.title
+            
+            addUpdateButton.setTitle("Update", for: .normal)
+        } else {
+            
+            deleteButton.isHidden = true
+            
+        }
         
     }
     

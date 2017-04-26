@@ -52,6 +52,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return cell
         }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let pin = pins[indexPath.row]
+        performSegue(withIdentifier: "pinSegue", sender: pin)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let nextVC = segue.destination as! HatPinViewController
+        nextVC.pin = sender as? Pin
+        
+    }
         
     }
     
