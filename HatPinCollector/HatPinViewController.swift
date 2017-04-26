@@ -59,16 +59,31 @@ class HatPinViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     
     @IBAction func cameraTapped(_ sender: Any) {
+        
+        imagePicker.sourceType = .camera
+        
+        present(imagePicker, animated: true, completion: nil)
+        
     }
     
     
     @IBAction func addTapped(_ sender: Any) {
         
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        if pin != nil {
+            
+            pin!.title = nameTextField.text
+            pin!.image = UIImagePNGRepresentation(pinImageView.image!)! as NSData
+            
+        } else {
+            
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            let pin = Pin(context: context)
+            pin.title = nameTextField.text
+            pin.image = UIImagePNGRepresentation(pinImageView.image!)! as NSData
+            
+        }
         
-        let pin = Pin(context: context)
-        pin.title = nameTextField.text
-        pin.image = UIImagePNGRepresentation(pinImageView.image!)! as NSData
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
@@ -76,5 +91,16 @@ class HatPinViewController: UIViewController, UIImagePickerControllerDelegate, U
         
     }
     
+    @IBAction func deleteTapped(_ sender: Any) {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        context.delete(pin!)
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        navigationController!.popViewController(animated: true)
+        
+    }
 
 }
